@@ -1,22 +1,9 @@
 import React from 'react'
 import { PhotoCard } from '../PhotoCard'
-import { useQuery, gql } from '@apollo/client'
+import { withPhotos } from '../../hoc/withPhotos'
 
-const withPhotos = gql`
-  query getPhotos{
-    photos{
-      id
-      categoryId
-      src
-      likes
-      userId
-      liked
-    }
-  }
-`
-
-export const ListPhotoCards = () => {
-  const { loading, error, data } = useQuery(withPhotos)
+export const ListPhotoCards = ({ categoryId }) => {
+  const { loading, error, data } = withPhotos(categoryId)
 
   if (error) {
     return <h2>Internal Server Error</h2>
