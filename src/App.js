@@ -9,17 +9,17 @@ import { GlobalStyle } from './styles/GlobalStyle'
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search)
   const detailId = urlParams.get('detail')
-  console.log(detailId)
+  // console.log(detailId)
 
   const components = () => (
     <>
-      <Logo />
       <ListOfCategories />
       <ListPhotoCards categoryId={1} />
     </>)
   return (
     <>
       <GlobalStyle />
+      <Logo />
       {detailId ? <PhotoCardWithQuery Id={detailId} /> : components()}
 
     </>
