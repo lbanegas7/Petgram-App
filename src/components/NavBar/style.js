@@ -27,4 +27,5 @@ export const Link = styled(LinkRouter)`
     text-decoration: none;
     width: auto;
     display: inline-flex;
+
 `
