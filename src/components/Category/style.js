@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
     display:flex;
     flex-direction: column;
     text-align: center;
