@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
   const value = {
     isAuth,
     activateAuth: (token) => {
-      console.log(token, 2)
+      // console.log(token, 2)
       setIsAuth(true)
       window.sessionStorage.setItem('token', token)
     }

@@ -1,7 +1,11 @@
 import React from 'react'
+import { FavsWithQuery } from '../components/Container/GetFavorites'
 
 export const Favs = () => {
   return (
-    <h1>Favs</h1>
+    <>
+      <p> <b> Favs </b></p>
+      <FavsWithQuery />
+    </>
   )
 }
