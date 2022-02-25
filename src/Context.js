@@ -13,6 +13,10 @@ const AppProvider = ({ children }) => {
       // console.log(token, 2)
       setIsAuth(true)
       window.sessionStorage.setItem('token', token)
+    },
+    removeAuth: () => {
+      setIsAuth(false)
+      window.sessionStorage.removeItem('token')
     }
   }
 

@@ -19,7 +19,6 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 })
 const errorMiddleware = onError(({ networkError }) => {
   if (networkError && networkError.result.code === 'invalid_token') {
-    console.log(14)
     window.sessionStorage.removeItem('token')
     window.location.href = '/'
   }
