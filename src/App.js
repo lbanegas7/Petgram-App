@@ -3,16 +3,19 @@ import React, { useContext, Suspense } from 'react'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Logo } from './components/Logo'
 import { NavBar } from './components/NavBar'
-import { Detail } from './pages/Detail'
+// import { Detail } from './pages/Detail'
 import { Home } from './pages/home'
-import { User } from './pages/User'
-// import { Favs } from './pages/Favs'
+// import { User } from './pages/User'
 import { GlobalStyle } from './styles/GlobalStyle'
-import { NotRegistedUser } from './pages/NotRegisteDUser'
+// import { NotRegistedUser } from './pages/NotRegisteDUser'
 import { Context } from './Context'
-import { NotFound } from './pages/NotFound'
+// import { NotFound } from './pages/NotFound'
 
 const Favs = React.lazy(() => import('./pages/Favs'))
+const NotRegistedUser = React.lazy(() => import('./pages/NotRegisteDUser'))
+const Detail = React.lazy(() => import('./pages/Detail'))
+const User = React.lazy(() => { import('./pages/User') })
+const NotFound = React.lazy(() => { import('./pages/NotFound') })
 
 export const App = () => {
   const { isAuth } = useContext(Context)
